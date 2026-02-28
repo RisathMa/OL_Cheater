@@ -1,4 +1,5 @@
 import { Search } from "lucide-react";
+import netsTriangle from "@/assets/nets-triangle.png";
 
 const navItems = [
   { label: "Home", href: "#" },
@@ -13,7 +14,7 @@ const Header = () => {
     <header>
       {/* Top Banner */}
       <div
-        className="py-3 px-4"
+        className="py-4 px-4"
         style={{
           background:
             "linear-gradient(135deg, hsl(340,60%,92%) 0%, hsl(0,0%,98%) 40%, hsl(220,60%,92%) 100%)",
@@ -24,33 +25,32 @@ const Header = () => {
           <img
             src="/images/sri-lanka-emblem.png"
             alt="Emblem of Sri Lanka"
-            className="h-24 w-auto"
+            className="h-28 w-auto"
           />
 
           {/* Center title */}
           <div className="flex-1 text-center px-4">
-            <p className="text-xl md:text-2xl font-bold text-foreground" style={{ fontFamily: "'Noto Sans Sinhala', sans-serif" }}>
+            <p className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: "'Noto Sans Sinhala', sans-serif" }}>
               ශ්‍රී ලංකා විභාග දෙපාර්තමේන්තුව
             </p>
-            <p className="text-lg md:text-xl font-bold text-foreground" style={{ fontFamily: "'Noto Sans Tamil', sans-serif" }}>
+            <p className="text-lg md:text-2xl font-bold text-foreground italic" style={{ fontFamily: "'Noto Sans Tamil', sans-serif" }}>
               இலங்கைப் பரீட்சைத் திணைக்களம்
             </p>
-            <p className="text-xl md:text-2xl font-bold text-foreground">
+            <p className="text-2xl md:text-3xl font-bold text-foreground">
               Department of Examinations, Sri Lanka
             </p>
           </div>
 
-          {/* Right - NETS triangle placeholder */}
+          {/* Right - NETS triangle image */}
           <div className="hidden md:flex flex-col items-center">
-            <div
-              className="w-0 h-0"
-              style={{
-                borderLeft: "40px solid transparent",
-                borderRight: "40px solid transparent",
-                borderBottom: "70px solid hsl(0,70%,50%)",
-              }}
+            <img
+              src={netsTriangle}
+              alt="NETS - Curriculum, Assessment, Evaluation, Teaching, Learning"
+              className="h-24 w-auto"
             />
-            <span className="text-xs font-bold mt-1 text-foreground">NETS</span>
+            <div className="border-2 border-destructive px-4 py-0.5 mt-1">
+              <span className="text-sm font-bold text-foreground tracking-wider">NETS</span>
+            </div>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Header = () => {
             <div className="flex items-center gap-1 text-sm">
               <button className="px-2 py-1 text-muted-foreground hover:text-foreground">සිංහල</button>
               <button className="px-2 py-1 text-muted-foreground hover:text-foreground">தமிழ்</button>
-              <button className="px-2 py-1 bg-primary text-primary-foreground rounded text-xs font-medium">
+              <button className="px-2 py-1 border border-foreground rounded text-xs font-medium text-foreground">
                 English
               </button>
             </div>
